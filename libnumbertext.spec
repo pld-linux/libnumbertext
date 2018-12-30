@@ -1,32 +1,35 @@
-#
-# Conditional build:
-#
 Summary:	Number to number name and money text conversion library
+Summary(pl.UTF-8):	Biblioteka do konwersji liczb i pieniędzy na tekst
 Name:		libnumbertext
-Version:	1.0.3
+Version:	1.0.5
 Release:	1
-License:	BSD
+License:	BSD or LGPL v3+
 Group:		Libraries
-Source0:	https://github.com/Numbertext/libnumbertext/releases/download/1.0/%{name}-%{version}.tar.xz
-# Source0-md5:	7772b37de7d5d3e95480c40f31df3466
-URL:		https://gitlab.com/numbertext/numbertext
-BuildRequires:	autoconf >= 2.65
+#Source0Download: https://github.com/Numbertext/libnumbertext/releases
+Source0:	https://github.com/Numbertext/libnumbertext/releases/download/%{version}/%{name}-%{version}.tar.xz
+# Source0-md5:	845c7ca37a6738e301073ad19ddc2602
+URL:		https://numbertext.github.io/
+BuildRequires:	autoconf >= 2.68
 BuildRequires:	automake >= 1:1.11
-BuildRequires:	boost-devel
+BuildRequires:	libstdc++-devel >= 6:4.7
 BuildRequires:	libtool >= 2:1.5
 BuildRequires:	xz
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 Number to number name and money text conversion libraries in C++,
-Java, JavaScript and Python & LibreOffice Calc Extension
+Java, JavaScript and Python & LibreOffice Calc Extension.
+
+%description -l pl.UTF-8
+Biblioteka C++ do konwersji liczb i pieniędzy na tekst dla C++,
+Javy, JavaScriptu i Pythona oraz rozszerzenia LibreOffice Calc.
 
 %package devel
 Summary:	Header files for libnumbertext
 Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki libnumbertext
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
-Requires:	boost-devel
+Requires:	libstdc++-devel >= 6:4.7
 
 %description devel
 This package contains the header files for developing applications
@@ -58,8 +61,7 @@ Statyczna biblioteka libnumbertext.
 %{__autoheader}
 %{__automake}
 %configure \
-	--disable-silent-rules \
-	--with-boost
+	--disable-silent-rules
 %{__make}
 
 
@@ -80,7 +82,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc AUTHORS ChangeLog NEWS README THANKS TODO
+%doc AUTHORS COPYING ChangeLog NEWS README.md THANKS
 %attr(755,root,root) %{_bindir}/spellout
 %attr(755,root,root) %{_libdir}/libnumbertext-1.0.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libnumbertext-1.0.so.0

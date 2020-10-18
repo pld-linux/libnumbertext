@@ -1,17 +1,17 @@
 Summary:	Number to number name and money text conversion library
 Summary(pl.UTF-8):	Biblioteka do konwersji liczb i pieniędzy na tekst
 Name:		libnumbertext
-Version:	1.0.5
+Version:	1.0.6
 Release:	1
 License:	BSD or LGPL v3+
 Group:		Libraries
 #Source0Download: https://github.com/Numbertext/libnumbertext/releases
 Source0:	https://github.com/Numbertext/libnumbertext/releases/download/%{version}/%{name}-%{version}.tar.xz
-# Source0-md5:	845c7ca37a6738e301073ad19ddc2602
+# Source0-md5:	d5e70dd61deb138add3fe3e8b102197c
 URL:		https://numbertext.github.io/
 BuildRequires:	autoconf >= 2.68
 BuildRequires:	automake >= 1:1.11
-BuildRequires:	libstdc++-devel >= 6:4.7
+BuildRequires:	libstdc++-devel >= 6:4.9
 BuildRequires:	libtool >= 2:1.5
 BuildRequires:	xz
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -29,7 +29,7 @@ Summary:	Header files for libnumbertext
 Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki libnumbertext
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
-Requires:	libstdc++-devel >= 6:4.7
+Requires:	libstdc++-devel >= 6:4.9
 
 %description devel
 This package contains the header files for developing applications

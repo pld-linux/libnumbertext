@@ -2,7 +2,7 @@ Summary:	Number to number name and money text conversion library
 Summary(pl.UTF-8):	Biblioteka do konwersji liczb i pieniędzy na tekst
 Name:		libnumbertext
 Version:	1.0.7
-Release:	1
+Release:	2
 License:	BSD or LGPL v3+
 Group:		Libraries
 #Source0Download: https://github.com/Numbertext/libnumbertext/releases

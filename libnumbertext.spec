@@ -1,13 +1,13 @@
 Summary:	Number to number name and money text conversion library
 Summary(pl.UTF-8):	Biblioteka do konwersji liczb i pieniędzy na tekst
 Name:		libnumbertext
-Version:	1.0.8
+Version:	1.0.10
 Release:	1
 License:	BSD or LGPL v3+
 Group:		Libraries
 #Source0Download: https://github.com/Numbertext/libnumbertext/releases
 Source0:	https://github.com/Numbertext/libnumbertext/releases/download/%{version}/%{name}-%{version}.tar.xz
-# Source0-md5:	31bea800c15d14b45a09448397f7d4ea
+# Source0-md5:	8a7f60b4aeef5b07f396ab6baa064a05
 URL:		https://numbertext.github.io/
 BuildRequires:	autoconf >= 2.68
 BuildRequires:	automake >= 1:1.11
